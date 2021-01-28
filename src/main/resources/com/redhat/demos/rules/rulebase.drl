@@ -7,7 +7,7 @@ when
    //
 then
   System.out.println("Rule " + drools.getRule().getName() + " fired!");
-  System.out.println("\t Hello from rules engine!");
+  System.out.println("\t Hello from Drools engine!");
 end
 
 rule "Int value"
