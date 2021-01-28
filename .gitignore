@@ -1,12 +1,12 @@
 
-    .classpath
-    .project
-    .settings
-    .factorypath
-    .vscode
-    .DS_Store
-    *.iml
-    .~lock*
-    /bin/
-    /target/
+.classpath
+.project
+.settings
+.factorypath
+.vscode
+.DS_Store
+*.iml
+.~lock*
+bin/
+target/
     
