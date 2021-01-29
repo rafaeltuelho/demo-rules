@@ -19,7 +19,8 @@
       <repositories>
         <repository>
           <id>nexus-repository</id>
-          <url>${env.NEXUS_REPO}/repository/maven-all-public/</url>
+          <!-- url>${env.NEXUS_REPO}/repository/maven-all-public/</url -->
+          <url>http://nexus3-gck-tools.apps.cluster-wunion-1c90.wunion-1c90.example.opentlc.com/repository/maven-all-public/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -30,7 +31,8 @@
         <repository>
             <id>maven-releases</id>
             <name>maven-releases</name>
-            <url>${env.NEXUS_REPO}/repository/maven-releases/</url>
+            <!-- <url>${env.NEXUS_REPO}/repository/maven-releases/</url> -->
+            <url>http://nexus3-gck-tools.apps.cluster-wunion-1c90.wunion-1c90.example.opentlc.com/repository/maven-releases/</url>
             <layout>default</layout>
             <releases>
               <enabled>true</enabled>
@@ -44,7 +46,8 @@
         <repository>
             <id>maven-snapshots</id>
             <name>maven-snapshots</name>
-            <url>${env.NEXUS_REPO}/repository/maven-snapshots/</url>
+            <!-- <url>${env.NEXUS_REPO}/repository/maven-snapshots/</url> -->
+            <url>http://nexus3-gck-tools.apps.cluster-wunion-1c90.wunion-1c90.example.opentlc.com/repository/maven-snapshots/</url>
             <layout>default</layout>
             <releases>
               <enabled>true</enabled>
