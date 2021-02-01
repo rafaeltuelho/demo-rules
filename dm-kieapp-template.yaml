@@ -1,7 +1,7 @@
 apiVersion: app.kiegroup.org/v2
 kind: KieApp
 metadata:
-  name: tekton-ks
+  name: '{{KIE_APP_NAME}}-ks'
   namespace: user2-dm-lab-staging
 spec:
   commonConfig:
@@ -16,13 +16,13 @@ spec:
       - name: KIE_SERVER_CONTAINER_DEPLOYMENT
         value: '{{KIE_SERVER_CONTAINER_DEPLOYMENT}}'
       - name: MAVEN_REPO_URL
-        value: '{{NEXUS_REPO_URL}}'
+        value: '{{MAVEN_REPO_URL}}'
       - name: MAVEN_REPO_USERNAME
-        value: rhpam
+        value: '{{MAVEN_REPO_USERNAME}}'
       - name: MAVEN_REPO_PASSWORD
-        value: Nexus@ocp
+        value: '{{MAVEN_REPO_PASSWORD}}'
       id: tekton-ks
-      name: tekton-ks
+      name: '{{KIE_APP_NAME}}-ks'
       replicas: 1
       resources:
         limits:
