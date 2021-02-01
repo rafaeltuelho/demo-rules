@@ -1,0 +1,35 @@
+apiVersion: app.kiegroup.org/v2
+kind: KieApp
+metadata:
+  name: tekton-ks
+  namespace: user2-dm-lab-staging
+spec:
+  commonConfig:
+    adminPassword: S3cr3tK3y#
+    adminUser: dmAdmin
+  environment: rhdm-production-immutable
+  objects:
+    servers:
+    - env:
+      - name: KIE_SERVER_MODE
+        value: PRODUCTION
+      - name: KIE_SERVER_CONTAINER_DEPLOYMENT
+        value: '{{KIE_SERVER_CONTAINER_DEPLOYMENT}}'
+      - name: MAVEN_REPO_URL
+        value: '{{NEXUS_REPO_URL}}'
+      - name: MAVEN_REPO_USERNAME
+        value: rhpam
+      - name: MAVEN_REPO_PASSWORD
+        value: Nexus@ocp
+      id: tekton-ks
+      name: tekton-ks
+      replicas: 1
+      resources:
+        limits:
+          cpu: "1"
+          memory: 2Gi
+        requests:
+          cpu: 500m
+          memory: 1Gi
+  upgrades: {}
+  useImageTags: true
